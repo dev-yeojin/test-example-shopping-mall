@@ -7,6 +7,7 @@ import { handlers } from '@/__mocks__/handlers';
 export const server = setupServer(...handlers);
 
 beforeAll(() => {
+  // 서버 구동
   server.listen();
 });
 
@@ -17,6 +18,7 @@ afterEach(() => {
 
 afterAll(() => {
   vi.resetAllMocks();
+  // 서버 종료
   server.close();
 });
 
