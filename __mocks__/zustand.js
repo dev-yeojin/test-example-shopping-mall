@@ -13,6 +13,7 @@ export const create = createState => {
 };
 
 // 테스트가 구동되기 전 모든 스토어를 리셋합니다.
+// 테스트의 독립성을 유지
 beforeEach(() => {
   act(() => storeResetFns.forEach(resetFn => resetFn()));
 });
